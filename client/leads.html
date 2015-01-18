@@ -1,0 +1,20 @@
+<template name="leadsView">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-8 col-xs-offset-2">
+                <ul class="list-group">
+                    {{#each leads}}
+                    {{> lead}}
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+    </div>
+</template>
+
+<template name="lead">
+    <li class="list-group-item">
+        <a href="{{url}}" target="_blank">{{name}}</a>
+        <a href="/news/{{urlTitle}}" class="badge no-style">{{description}}}</a>
+    </li>
+</template>

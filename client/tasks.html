@@ -1,0 +1,20 @@
+<template name="tasksView">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-8 col-xs-offset-2">
+                <ul class="list-group">
+                    {{#each tasks}}
+                    {{> task}}
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+    </div>
+</template>
+
+<template name="task">
+    <li class="list-group-item">
+        <a href="{{url}}" target="_blank">{{title}}</a>
+        <a href="/news/{{urlTitle}}" class="badge no-style">{{description}}}</a>
+    </li>
+</template>
