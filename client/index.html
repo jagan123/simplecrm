@@ -23,12 +23,12 @@
             <li><a href="/tasks">Tasks</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="../navbar/">Login</a></li>
+           <!--  <li><a href="../navbar/">Login</a></li> -->
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
-<!-- <footer><p>Made with love by Jagan Ganti</p></footer> -->
+
 </body>
 <template name="projectsView">
     <div class="container">
@@ -52,50 +52,15 @@
     </li>
 </template>
 
-<!-- <template name="newsView">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-8 col-xs-offset-2">
-                <h1>{{title}}</h1>
-                <hr/>
-                <h2>Comments</h2>
-                <div class="loginBtns">
-                    {{>loginButtons}}
-                </div>
-                <span>There will be some comments soon!</span>
-                {{#if currentUser}}
-                <div class="form">
-                  <form class="addcommentsform">
-                    <input type="text" id="title" class="form-control" rows="3" name="title" placeholder="Enter your comment"/> <br/> 
-                    <input type="submit" value="Add" class="btn btn-success btn-lg"/>
-                  </form>
-                </div>
-                {{else}}
-                    <div>Please login to submit a comment</div>
-                {{/if}}
 
-            </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-8 col-xs-offset-2">
-                <ul class="list-group">
-                    {{#each comment}}
-                        {{> comments}}
-                    {{/each}}
-                </ul>
-            </div>
-        </div>
-    </div>
-</template>
--->
 <template name="addProject">
     <div class="container">
         <div class="row">
             <div class="col-xs-4 col-xs-offset-4">
                 <div class="loginBtns">
-                  <!--   {{>loginButtons}} -->
+                    {{>loginButtons}}
                 </div>
-                <!-- {{#if currentUser}} -->
+                {{#if currentUser}}
                     <div class="form">
                         <form class="addProjectsForm">
                             <input type="text" id="title" class="form-control" name="title" placeholder="Title"/> <br/>
@@ -103,9 +68,9 @@
                             <input type="submit" value="Add" class="btn btn-success btn-lg"/>
                         </form>
                     </div>
-                <!-- {{else}}
+                {{else}}
                     <div>Please login to submit a news</div>
-                {{/if}} -->
+                {{/if}}
             </div>
         </div>
     </div>
