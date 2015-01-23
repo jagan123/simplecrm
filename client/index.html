@@ -31,9 +31,13 @@
 
 </body>
 <template name="projectsView">
-    <div class="container">
+    <div class="container"><br>
+        <div class="row"> 
+          <a href="/projects/add" type="submit" value="addProject" class="btn btn-success">Add a Project</a>     <br><br>
+          {{> searchBox}}    
+        </div>
+        <br><br>
         <div class="row">
-          <a href="/projects/add" type="submit" value="addProject" class="btn btn-success">Add a Project</a>
             <div class="col-xs-8 col-xs-offset-2">
                 <ul class="list-group">
                     {{#each projects}}
@@ -44,10 +48,16 @@
         </div>
     </div>
 </template>
+<template name="searchBox">
+              {{> esInput index="projects" placeholder="Search by title" }}
 
+              {{#esEach index="projects"}}
+                  {{> project}}
+              {{/esEach}}
+          </template>
 <template name="project">
     <li class="list-group-item">
-        <b><a href="{{url}}" target="_blank">{{title}}</a></b>
+        <b>{{title}}</b>
         <p>{{description}}</p>
     </li>
 </template>
